@@ -11,12 +11,21 @@ import righticon from './image/righticon.png';
 
 
 const NavBar = () => {
+    const [isClicked, setIsClicked] = useState('Spot');
     const [toggle, setToggle] = useState(false);
     const menuRef = useRef(null);
     const menuButtonRef = useRef(null);
     const [scrolled, setScrolled] = useState(false); // For background styling
     const [isVisible, setIsVisible] = useState(true); // For show/hide
     const [prevScrollPos, setPrevScrollPos] = useState(0); // Tracks scroll direction
+
+   const navItems = [
+    { id: 'BuyCrypto', label: 'Buy Crypto' },
+    { id: 'Markets', label: 'Markets' },
+    { id: 'Spot', label: 'Spot' },
+    { id: 'Earn', label: 'Earn' },
+    { id: 'Web3', label: 'Web3' },
+  ];
 
     // Handle clicks outside to close the menu
     const handleClickOutside = (event) => {
@@ -39,6 +48,7 @@ const NavBar = () => {
     // Smooth scroll to section
     const handleScroll = (e, sectionId) => {
         e.preventDefault();
+        setIsClicked(sectionId);
         const section = document.getElementById(sectionId);
         if (section) {
             window.scrollTo({
@@ -94,10 +104,8 @@ const NavBar = () => {
 
     return (
         <div className={` header ${scrolled ? "scrolled" : " "} z-[150] w-full header backgronsdvg   ${
-            isVisible ? "translate-y-0 transition-transform duration-300 " : "-translate-y-full transition-transform duration-300 "
-        }`}>
-            
-            <header className='px-[24px]   flex  justify-between items-center py-[20px] sm:py-[24px] lg:py-[30px] relative  sm:overflow-hidden backgroundimage sm:px-[40px] md:px-[50px] lg:px-[70px] xl:px-[90px] 2xl:px-[100px]'>
+            isVisible ? "translate-y-0 transition-transform duration-300 " : "-translate-y-full transition-transform duration-300 "}`}>
+            <header className='flex justify-between items-center py-[24px] sm:py-[30px] lg:py-[40px] relative  sm:overflow-hidden backgroundimage px-[24px] sm:px-[30px] lg:px-[40px]'>
             <dev className='linersext absolute bottom-0 left-0 w-full h-[2px] z-10'></dev>
             <Link onClick={(e) => handleScrollToTop(e, "")} href='#' className='cursor-pointer relative flex  items-center justify-start Froggo-Logo'>
                 <Image className='w-full h-[24px] sm:h-[32px] 2xl:h-[38.7px]' src={logo} alt=''/></Link>
@@ -119,37 +127,32 @@ const NavBar = () => {
                  
 
                 <nav ref={menuRef} className={`mr-auto navbar-items-main absolute  sm:left-0 sm:relative duration-1000 z-[99] sm:opacity-100 flex justif-start sm:justify-center items-start sm:items-center gap-[16px] sm:gap-[20px] md:gap-[24px] lg:gap-[32px] xl:gap-[36px] 2xl:gap-[40px] sm:blur-none blur-[200] sm:bg-transparent bg-[#15161B] right-0 sm:flex-row flex-col p-[20px] sm:p-[0] sm:w-fit w-full  sm:h-full pl-[24px] sm:pl-[32px] md:pl-[36px] lg:pl-[40px] xl:pl-[48px] 2xl:pl-[60px]
-                    ${toggle ? 'top-[67px] h-screen' :'-top-[500%]' }
+                    ${toggle ? 'top-[67px] h-screen' :'-top-[600%]' }
                     ${toggle ? 'opacity-100' : 'opacity-10'} 
                     `} >
-                    <a className="cursor-pointer Link-manu-bar flex items-center gap-[6px] lg:gap-[8px]" href="#BuyCrypto" onClick={(e) => handleScroll(e, "BuyCrypto")}>
-                    Buy Crypto
-                    </a>
-
-                    <a className="cursor-pointer Link-manu-bar flex items-center gap-[6px] lg:gap-[8px]" href="#Markets" onClick={(e) => handleScroll(e, "Markets")}>
-                    Markets</a>
-
-                    <a className="cursor-pointer Link-manu-bar flex items-center gap-[6px] lg:gap-[8px]" href="#Spot" onClick={(e) => handleScroll(e, "Spot")}>
-                    Spot
-                    </a>
-
-                    <a className="cursor-pointer Link-manu-bar flex items-center gap-[6px] lg:gap-[8px]" href="#Earn" onClick={(e) => handleScroll(e, "Earn")}>
-                    Earn</a>
-
-                    <a className="cursor-pointer Link-manu-bar flex items-center gap-[6px] lg:gap-[8px]" href="#Web3" onClick={(e) => handleScroll(e, "Web3")}>
-                    Web3
-                    </a>
+                    {navItems.map((item) => (
+                        <a key={item.id} className={`cursor-pointer Link-manu-bar flex items-center gap-[6px] lg:gap-[8px] ${isClicked === item.id ? 'bg-[#FFF] text-[#060606]' : ' bg-[#7D7DA81A] text-[#fff]'}`} // Added padding and text color for better styling
+                        href={`#${item.id}`}onClick={(e) => handleScroll(e, item.id)}>
+                        {item.label}
+                        </a>
+                    ))}
 
                     <ul className='sm:hidden flex flex-col  gap-[14px] sm:gap-[15px] md:gap-[16px] lg:gap-[20px] xl:gap-[24px] 2xl:gap-[30px]'>
-                    <button className='buttonauditelt cursor-pointer text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] flex items-center justify-center font- h-[30px] md:h-[40px] lg:h-[44px] xl:h-[48px] 2xl:h-[59px] px-[16px] sm:px-[20px] md:px-[24px] lg:px-[32px] xl:px-[36px] 2xl:px-[40px] '>
-                    Createwallet
+                        <a className="cursor-pointer bg-[#7D7DA81A] text-white justify-center Link-manu-bar flex items-center gap-[6px] lg:gap-[8px]">
+                Log In
+                </a>
+                    <button className='buttonauditelt cursor-pointer text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] xl:text-[15px] 2xl:text-[16px] px-[18px] sm:px-[15px] md:px-[16px] lg:px-[20px] xl:px-[24px] 2xl:px-[32px] py-[9px] sm:py-[12px] md:py-[13px] lg:py-[14px] xl:py-[15px] 2xl:py-[16px]  group gap-[7.50px]'>
+                    Sign Up
                     </button>
                     </ul>
                 </nav>
                 
                 <ul className='sm:flex hidden gap-[14px] sm:gap-[15px] md:gap-[16px] lg:gap-[20px] xl:gap-[24px] 2xl:gap-[30px] ml-atuo'>
-                <button className='buttonauditelt cursor-pointer text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] flex items-center justify-center h-[30px] md:h-[40px] lg:h-[44px] xl:h-[48px] 2xl:h-[59px] px-[16px] sm:px-[20px] md:px-[24px] lg:px-[32px] xl:px-[36px] 2xl:px-[40px]  group gap-[7.50px]'>
-                    Create wallet
+                <a className="cursor-pointer bg-[#7D7DA81A] text-[#fff] Link-manu-bar flex items-center gap-[6px] lg:gap-[8px]">
+                Log In
+                </a>
+                <button className='buttonauditelt cursor-pointer text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] xl:text-[15px] 2xl:text-[16px] px-[18px] sm:px-[15px] md:px-[16px] lg:px-[20px] xl:px-[24px] 2xl:px-[32px] py-[9px] sm:py-[12px] md:py-[13px] lg:py-[14px] xl:py-[15px] 2xl:py-[16px]  group gap-[7.50px]'>
+                    Sign Up
                 </button>
                 </ul>
                 
