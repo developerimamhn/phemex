@@ -86,9 +86,15 @@ const HeroPage = () => {
 
     return (
         <div id="hero" ref={buttonRef} className='relative'>
-          <div className='relative z-[2] overflow-hidden'>
-              <div className='pt-[80px] sm:pt-[81px] md:pt-[150px] xl:pt-[200px] 2xl:pt-[250px]  px-[24px] sm:px-[40px] md:px-[50px] lg:px-[70px] xl:px-[90px] 2xl:px-[100px] w-full flex felx-center justify-center relative pb-[50px] sm:pb-[70px] md:pb-[90px] lg:pb-[110px] xl:pb-[140px] 2xl:pb-[180px]'>
-                
+          <div className='relative z-[2] overflow-hidden px-[16px] sm:px-[20px] md:px-[24px] lg:px-[32px] xl:px-[36px] 2xl:px-[40px]'>
+              <div className='pt-[70px] sm:pt-[60px] md:pt-[70px] xl:pt-[100px] 2xl:pt-[150px]'>
+                <div className=''>
+                  <div className='grid grid-cols-12 px-[14px] sm:px-[15px] md:px-[16px] lg:px-[20px] xl:px-[24px] 2xl:px-[32px] dashbordfastbox'>
+                    <div className='col-span-5'>
+                      <h2 className='cryptolads text-[14px] sm:text-[15px] md:text-[16px] lg:text-[20px] xl:text-[24px] 2xl:text-[32px]'>Crypto Launchpad</h2>
+                    </div>
+                  </div>
+                </div>
             </div>
           </div>
         </div>

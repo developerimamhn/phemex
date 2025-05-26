@@ -72,6 +72,17 @@ body {
 
 
 @layer utilities{
+  .cryptolads{
+    color: #FFF;
+    font-family: "HarmonyOS Sans";
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%; /* 41.6px */
+  }
+  .dashbordfastbox{
+    border-radius: 24px;
+    background: #020F19;
+  }
   .conflueiah{
     color: var(--Blue-B200, #6B788E);
     font-family: 'HarmonyOS Sans';
