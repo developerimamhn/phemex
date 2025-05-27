@@ -72,6 +72,88 @@ body {
 
 
 @layer utilities{
+.buttenccatps {
+  border-radius: 100px;
+  background: #37F;
+  color: #FFF;
+  font-family: "HarmonyOS Sans";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+  border: 1px solid rgba(126, 137, 158, 0);
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+.buttenccatps:hover {
+  border: 1px solid rgba(126, 137, 158, 0.30);
+  background: rgba(125, 125, 168, 0.10);
+  backdrop-filter: blur(27.5px);
+}
+
+  .padionxestwed{
+    color: #7D7F87;
+    font-family: "HarmonyOS Sans";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+  }
+  .tokenbotasonx{
+    color: #7D7F87;
+    font-family: "HarmonyOS Sans";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+  }
+  .dictruciotns{
+    color: #7D7F87;
+    font-family: "HarmonyOS Sans";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+    border-radius: 100px;
+    background: rgba(125, 125, 168, 0.10);
+  }
+  .dateceseionnub{
+    color: #FFF;
+    text-align: right;
+    font-family: "HarmonyOS Sans";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 22.4px */
+  }
+  .pronclossdate{
+    color: #7D7F87;
+    text-align: right;
+    font-family: "HarmonyOS Sans";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+  }
+  .tkbsectadon{
+    border-radius: 24px;
+    background: #10121B;
+  }
+  .taoalnumbering{
+    color: #757B95;
+    font-family: "HarmonyOS Sans";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+  }
+  .numbazzsedcv{
+    color: #FFF;
+    font-family: "HarmonyOS Sans";
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%; /* 33.6px */
+  }
+  .crysearlyhto{
+    color: #FFF;
+    font-family: "HarmonyOS Sans";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+  }
   .cryptolads{
     color: #FFF;
     font-family: "HarmonyOS Sans";
@@ -1467,7 +1549,7 @@ background: linear-gradient(180deg, #010214 0%, #010214 16.55%, #4E27BC 63.32%, 
     border-bottom-width: 0.78px;
     border-style: solid; */
     border: 1px solid rgba(0, 204, 255, 0.00);
-    background: linear-gradient(114deg, rgba(18, 23, 29, 0.00) 0%, #13181F 42.16%, rgba(21, 26, 33, 0.00) 100%);
+    background: #06081100;
     backdrop-filter: blur(2px);
     opacity: 10%;
     transition: 0.5s;
