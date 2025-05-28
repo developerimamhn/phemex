@@ -18,7 +18,7 @@ const projects = [
     price: "1 TKB = 0.005 USDT",
     description: "TokenBot® links algorithmic strategies to exchanges for seamless liquidity access.",
     iconSvg: (
-      <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg className='w-[45px] sm:w-[45px] md:w-[40px] lg:w-[48px] xl:w-[64px] 2xl:w-[72px]' viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="72" height="72" rx="36" fill="#7D7DA8" fill-opacity="0.1"/>
 <path d="M51.0611 36C51.0611 44.2843 44.318 51 36 51C27.682 51 20.939 44.2843 20.939 36C20.939 27.7157 27.682 21 36 21C44.318 21 51.0611 27.7157 51.0611 36ZM25.1564 36C25.1564 41.9645 30.0113 46.7996 36 46.7996C41.9888 46.7996 46.8436 41.9645 46.8436 36C46.8436 30.0355 41.9888 25.2004 36 25.2004C30.0113 25.2004 25.1564 30.0355 25.1564 36Z" fill="url(#paint0_linear_11_125)"/>
 <rect x="14.8503" y="30.3511" width="4.16583" height="10.8511" rx="2.08291" fill="#D9D9D9"/>
@@ -95,7 +95,7 @@ const projects = [
     price: "1 SWP = 0.05 USDT",
     description: "StepWatch is a WEB3 fitness app combining health tracking, NFT Move-To-Earn rewards, and social networking features.",
     iconSvg: (
-      <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg className='w-[45px] sm:w-[45px] md:w-[40px] lg:w-[48px] xl:w-[64px] 2xl:w-[72px]' viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="72" height="72" rx="36" fill="#7D7DA8" fill-opacity="0.1"/>
 <path d="M51 36C51 44.2843 44.2843 51 36 51C27.7157 51 21 44.2843 21 36C21 27.7157 27.7157 21 36 21C44.2843 21 51 27.7157 51 36ZM23.4651 36C23.4651 42.9228 29.0772 48.5349 36 48.5349C42.9228 48.5349 48.5349 42.9228 48.5349 36C48.5349 29.0772 42.9228 23.4651 36 23.4651C29.0772 23.4651 23.4651 29.0772 23.4651 36Z" fill="#D9D9D9"/>
 <path d="M51 36C51 44.2843 44.2843 51 36 51C27.7157 51 21 44.2843 21 36C21 27.7157 27.7157 21 36 21C44.2843 21 51 27.7157 51 36ZM23.4651 36C23.4651 42.9228 29.0772 48.5349 36 48.5349C42.9228 48.5349 48.5349 42.9228 48.5349 36C48.5349 29.0772 42.9228 23.4651 36 23.4651C29.0772 23.4651 23.4651 29.0772 23.4651 36Z" fill="url(#paint0_linear_19_111)"/>
@@ -163,7 +163,7 @@ const projects = [
     price: "1 REVO = 0.6 USDT",
     description: "Revoland is a blockchain-based e-sports game featuring competitive gameplay, digital assets, and rewards.",
     iconSvg: (
-      <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg className='w-[45px] sm:w-[45px] md:w-[40px] lg:w-[48px] xl:w-[64px] 2xl:w-[72px]' viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect width="72" height="72" rx="36" fill="#7D7DA8" fillOpacity="0.1" />
         <path
           d="M24 24L48 48M48 24L24 48"
@@ -301,9 +301,9 @@ const HeroPage = () => {
     return (
         <div id="hero" ref={buttonRef} className='relative pb-[14px] sm:pb-[15px] md:pb-[16px] lg:pb-[20px] xl:pb-[24px] 2xl:pb-[32px]'>
           <div className='relative z-[2] overflow-hidden px-[16px] sm:px-[20px] md:px-[24px] lg:px-[32px] xl:px-[36px] 2xl:px-[40px]'>
-              <div className='pt-[70px] sm:pt-[60px] md:pt-[70px] xl:pt-[100px] 2xl:pt-[150px]'>
+              <div className='pt-[70px] sm:pt-[90px] md:pt-[110px] xl:pt-[100px] 2xl:pt-[120px]'>
                 <div className=''>
-                  <div className='grid grid-cols-6 sm:grid-cols-12 pl-[14px] sm:pl-[15px] md:pl-[16px] lg:pl-[20px] xl:pl-[24px] 2xl:pl-[32px] py-[14px] sm:py-[15px] md:py-[16px] lg:py-[20px] xl:py-[24px] 2xl:py-[32px] dashbordfastbox relative overflow-hidden'>
+                  <div className='grid grid-cols-6 sm:grid-cols-12 pl-[24px] sm:pl-[15px] md:pl-[16px] lg:pl-[20px] xl:pl-[24px] 2xl:pl-[32px] py-[24px] sm:py-[15px] md:py-[16px] lg:py-[20px] xl:py-[24px] 2xl:py-[32px] dashbordfastbox relative overflow-hidden'>
                     <svg className=' sm:h-auto h-full sm:w-full absolute top-0 left-0' viewBox="0 0 1360 290" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_f_2023_111)">
 <ellipse cx="530" cy="82" rx="37" ry="50" transform="rotate(-16.9053 530 82)" fill="#3377FF"/>
@@ -569,12 +569,12 @@ const HeroPage = () => {
                     <path d="M15.9453 12.3948C15.7686 13.0215 14.9333 13.4644 13.2629 14.3502C11.648 15.2064 10.8406 15.6346 10.1899 15.4625C9.9209 15.3913 9.6758 15.2562 9.47812 15.0701C9 14.6198 9 13.7465 9 12C9 10.2535 9 9.38018 9.47812 8.92995C9.6758 8.74381 9.9209 8.60868 10.1899 8.53753C10.8406 8.36544 11.648 8.79357 13.2629 9.64983C14.9333 10.5356 15.7686 10.9785 15.9453 11.6052C16.0182 11.8639 16.0182 12.1361 15.9453 12.3948Z" stroke="white" stroke-width="1.2" stroke-linejoin="round"/>
                   </svg> Launchpad Beginner’s Guide</p>
                   </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-[20px]">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-[20px]">
                     {projects.map((project) => (
                       <div key={project.id} className="col-span-1 relative rounded-[24px] overflow-hidden tkbsectadon">
                         {project.ellipseSvg1}
                         {project.ellipseSvg2}
-                        <div className="p-[14px] sm:p-[15px] md:p-[16px] lg:p-[20px] xl:p-[24px] 2xl:p-[32px] relative">
+                        <div className="p-[24px] sm:p-[15px] md:p-[16px] lg:p-[20px] xl:p-[24px] 2xl:p-[32px] relative">
                           <div className="flex items-center justify-between">
                             {project.iconSvg}
                             <div>

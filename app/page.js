@@ -8,10 +8,10 @@ export default function Home() {
   return (
     <div className="relative">
     <Image src={allbackground} alt="background" fill className="object-cover object-center absolute left-0 top-0 Z-[-1]" />
-      <LenisProvider>
+      {/* <LenisProvider> */}
       <Header />
       {/* <Body /> */}
-      </LenisProvider>
+      {/* </LenisProvider> */}
     </div>
   );
 }
